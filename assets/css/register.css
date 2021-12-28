@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body,
+p {
+  width: 100%;
+  height: 100%;
+}
+
+.principalTable{
+  border-radius: 10px;
+  transform: scale(1.5);
+  min-height: 260px;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.divPrincipal{
+  display: flex;
+  width: inherit;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(270deg, #ffa9fb 0, #f098f2 16.67%, #d584e7 33.33%, #b46cd8 50%, #9156ca 66.67%, #6f46bf 83.33%, #4b3bb8 100%);
+}
+
+.divInputs{
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.button{
+  width: 40%;
+  margin-top: 10%;
+}
+
