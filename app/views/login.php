@@ -7,7 +7,7 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="./assets/css/login.style.css">
     <title>SignIn</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
                             <button class="button" type="submit">Sign In</button>
                         </div>
                         <div class="divInputs">
-                            <a href='Register.php'>Sing Up</a>
+                            <a href='register'>Sing Up</a>
                         </div>
                     </form>
                 </td>

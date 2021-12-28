@@ -3,18 +3,12 @@
 	class Index extends Controller {
 
 		public function __construct() {
-		
+			$this->loadModel('user');
 		}
 		
-		// ruta index
+
 		public function index() {
 			$this->render('login');
 		}
-
-		// ruta index/test
-		public function register() {
-			$this->render('register');
-		}
-
 
 	}
