@@ -1,12 +1,12 @@
 <?php
 	/**
 	 * Class Controller
-	 * Classe principal pour tous les contrôleurs, ici sont référencer toutes les méthodes(fonctions) communes dee nos contrôleurs
+	 * Main class used for all controllers in the project
 	 */
 	class Controller
 	{
 		/**
-		 * Chargement dynamiques de nos modèles(Model)
+		 * Dynamic model loader
 		 * @param $model
 		 * @return mixed
 		 */
@@ -17,7 +17,7 @@
 		}
 		
 		/**
-		 * Chargement dynamique de nos vues
+		 * Dynamic view loader
 		 * @param $view
 		 * @param array $data
 		 */
@@ -25,6 +25,7 @@
 		{
 			if (file_exists('../app/views/' . $view . '.php'))
 			{
+				echo "<link rel='stylesheet' href='./assets/css/style.css'>"; // add global styles
 				require_once '../app/views/' . $view . '.php';
 			} else {
 				$this->renderError(424);
@@ -32,7 +33,7 @@
 		}
 
         /**
-         * Chargement dynamique des pages erreurs
+         * Dynamic error view loader
          * @param number $codeError
          * @param string $titleError
          */
