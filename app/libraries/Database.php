@@ -1,13 +1,14 @@
 <?php
 	/**
 	 * Class Database
-	 * Gère les requêtes à la bdd
+	 * mange sql queries
 	 */
 	class Database {
 		private $dbHost = DB_HOST;
 		private $dbUser = DB_USER;
 		private $dbPass = DB_PASS;
 		private $dbName = DB_NAME;
+		private $dbPort = DB_PORT;
 		
 		private $statement;
 		private $dbHandler;
@@ -15,10 +16,10 @@
 		
 		/**
 		 * Database constructor.
-		 * Établi la connection à la bdd
+		 * Enable database conection
 		 */
 		public function __construct() {
-			$conn = 'pgsql:host=' . $this->dbHost . ';dbname=' . $this->dbName;
+			$conn = 'pgsql:host=' . $this->dbHost .';port='.$this->dbPort.';dbname=' . $this->dbName;
 
 			$options = array(
 				PDO::ATTR_PERSISTENT => true,
@@ -32,12 +33,12 @@
 			}
 		}
 		
-		// Permet d’écrire des requêtes
+		// write sql queries
 		public function query($sql) {
 			$this->statement = $this->dbHandler->prepare($sql);
 		}
 		
-		// Valeurs de liaison(bindValues)
+		// bind values
 		public function bind($parameter, $value, $type = null) {
 			switch (is_null($type)) {
 				case is_int($value):
@@ -60,19 +61,19 @@
 			return $this->statement->execute();
 		}
 		
-		// Renvoie un tableau
+		// return array
 		public function fetchAll() {
 			$this->execute();
 			return $this->statement->fetchAll(PDO::FETCH_OBJ);
 		}
 		
-		// Retourne une ligne spécifique en tant qu’objet
+		// return rown like object
 		public function fetch() {
 			$this->execute();
 			return $this->statement->fetch(PDO::FETCH_OBJ);
 		}
 		
-		// Obtenir le nombre de lignes
+		// get total rows
 		public function rowCount() {
 			return $this->statement->rowCount();
 		}

@@ -1,7 +1,13 @@
 <?php
+
+	require_once 'Dotenv.php';
+
+	(new Dotenv('../.env'))->load();
+
 	ini_set('display_errors', '1');
 	ini_set('display_startup_errors', '1');
 	error_reporting(E_ALL);
+
 	/**
 	 * App Core Class
 	 * Creates URL & loads core controller
@@ -14,25 +20,26 @@
 		
 		public function __construct(){
 			$url = $this->getUrl();
-			// Rechercher dans le BLL(Business Logic Layer) pour la première valeur
+			
+			// Search the first controller whit the name
 			if(isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]). '.class.php')){
-				// S’il existe, défini comme controller
+				// if exist, define current controller
 				$this->currentController = ucwords($url[0]);
-				// Unset l'index 0
+				// delete the first value in url array
 				unset($url[0]);
 			} else if(isset($url[0])) {
                 $data = ['headTitle' => 'Not found', 'cssFile' => 'errors', "errorCode" => 404 ];
                 die(require_once("../app/views/errors.php"));
             }
 			
-			// Exige le contrôleur
+			// import controller selected
 			require_once '../app/controllers/'. $this->currentController . '.class.php';
 			
-			// Instancie le controller
+			// instnace the controller
 			$this->currentController = new $this->currentController;
-			// Vérifie la deuxième partie de l’url
+			// verify the second value of array 
 			if(isset($url[1])){
-				// Vérifier si la méthode existe dans le controller
+				// verify if the method exist in the selected controller 
 				if(method_exists($this->currentController, $url[1])){
 					$this->currentMethod = $url[1];
 					// Unset l'index 1
@@ -40,10 +47,9 @@
 				}
 			}
 			
-			// Obtenir les paramètres
+			// get params from url
 			$this->params = $url ? array_values($url) : [];
 			
-			// Appel un callback avec un tableau de paramètres
 			call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
 		}
 		
@@ -54,7 +60,8 @@
 			$url = $requestString['path'];
 			$url = ltrim($url, '/');
 
-			if(isset($url)){
+			if(isset($url) && strlen($url) > 0){
+
 				$url = rtrim($url, '/');
 				$url = filter_var($url, FILTER_SANITIZE_URL);
 				$url = explode('/', $url);
