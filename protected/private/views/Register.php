@@ -19,15 +19,15 @@
                         <h1 style="margin-bottom: 10%;">Sign Up</h1>     
 
                         <div class="divInputs"> 
-                            <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+                            <input type="email" id="user-email" placeholder="Email address" required autofocus="">
                         </div>
 
                         <div class="divInputs">
-                            <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                            <input type="password" id="user-pass" placeholder="Password" required autofocus="">
                         </div>
 
                         <div class="divInputs">
-                            <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+                            <input type="password" id="user-repeatpass" placeholder="Repeat Password" required autofocus="">
                         </div>
                         
                         <div class="divInputs">

@@ -19,11 +19,11 @@
                         <h1 style="margin-bottom: 10%;">Sign In</h1>     
 
                         <div class="divInputs"> 
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                            <input type="email" id="inputEmail" placeholder="Email address" required="" autofocus="">
                         </div>
 
                         <div class="divInputs">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                            <input type="password" id="inputPassword" placeholder="Password" required="" autofocus="">
                         </div>
                         
                         <div class="divInputs">
