@@ -11,9 +11,9 @@
 			$this->render('login');
 		}
 
-		// ruta undex/test
-		public function test() {
-			$this->render('test');
+		// ruta index/test
+		public function register() {
+			$this->render('register');
 		}
 
 
