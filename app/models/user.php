@@ -1,8 +1,8 @@
 <?php
 
-require_once '../app/libraries/Model.php';
+class User {
 
-class User  extends Model {
+    private Database $db;
 
     public function login($email, $password)
     {
