@@ -11,4 +11,11 @@
 			$this->render('login');
 		}
 
+
+		public function logout() {
+			
+			//aqui se elimina la sesión del usuario
+
+			$this->render('login');
+		}
 	}

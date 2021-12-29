@@ -1,0 +1,19 @@
+
+.menu{
+  display: flex;
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+}
+
+
+.logout{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.title{
+  font-weight: 600;
+}

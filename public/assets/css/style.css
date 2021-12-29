@@ -2,7 +2,39 @@
     Global styles. This styles will be implemente for all views
 */
 
+:root {
+    --primary: #8A79F7;
+    --secondary: #F79754;
+    --warning:rgb(224, 208, 61);
+    --danger:rgb(199, 53, 53);
+    --success:rgb(35, 195, 48);
+}
 
+    
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #ECECEC;
+}
+
+
+.text-warning{
+    color: var(--warning) !important;
+}
+
+.text-danger{
+    color: var(--danger) !important;
+}
+
+.text-success{
+    color: var(--success) !important;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.decoration-none{
+    text-decoration: none;
+    color: black;
 }

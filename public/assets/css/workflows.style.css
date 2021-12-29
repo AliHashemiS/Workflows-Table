@@ -1,0 +1,91 @@
+:root{
+  --min: 120px;
+  --max: 250px;
+}
+
+.container{
+  padding: 8px;
+  width: calc(100% - 16px);
+}
+
+.workflows{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--max), var(--min)));
+  max-width: 100%;
+  grid-gap: 50px;
+  align-items: center;
+} 
+
+.workflow{
+  display: block;
+  height: 100%;
+  max-width: var(--max);
+  min-width: var(--min);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.25);
+}
+
+.workflow-title{
+  margin-top: 5px;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  color: black;
+}
+
+.workflow-title:disabled{
+  background-color: transparent;
+  color: black;
+  
+}
+
+.workflow-description{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.workflow-description:disabled{
+  background-color: transparent;
+  color: black;
+}
+
+.worflow-submit{
+  display: block;
+  background-color: var(--success);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.worflow-submit:hover{
+  opacity: 0.8;
+}
+
+.worflow-submit:disabled{
+  opacity: 0.5;
+}
+
+.worflow-submit:disabled:hover{
+  opacity: 0.6;
+}
+
+.edit{
+  background-color: transparent;
+  border:none;
+}

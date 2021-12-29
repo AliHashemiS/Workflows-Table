@@ -25,7 +25,8 @@
 		{
 			if (file_exists('../app/views/' . $view . '.php'))
 			{
-				echo "<link rel='stylesheet' href='./assets/css/style.css'>"; // add global styles
+				echo "<link rel='stylesheet' href='/assets/css/style.css'>"; // add global styles
+				echo "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>";
 				require_once '../app/views/' . $view . '.php';
 			} else {
 				$this->renderError(424);
