@@ -1,0 +1,55 @@
+.back-button{
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+}
+
+.container{
+  padding: 8px;
+  width: calc(100% - 16px);
+  height: calc(100vh - 70px);
+}
+
+.columns{
+  display: grid;
+  grid-auto-columns: 280px;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  overflow: scroll;
+  height: calc(100% - 65px);
+  padding: 8px;
+  overflow-y: hidden;
+}
+
+.column{
+  display: inline-block;
+  background-color: whitesmoke;
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.column-title input{
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  
+}
+
+.column-title input:disabled{
+  cursor: pointer;
+}
+
+.column-stikynotes{
+  list-style: none;
+  height: 100%;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+.stikynote{
+  border-radius: 5px;
+  border: 1px grey;
+}
