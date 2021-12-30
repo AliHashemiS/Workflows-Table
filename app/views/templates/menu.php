@@ -1,15 +1,27 @@
 <link rel="stylesheet" href="/assets/css/menu.style.css">
 
-<nav class="menu">
-    <div class="title">
-        <a class="decoration-none" href="/workflows">Tablero Virtual</a>
-    </div>
-    <div>
-        <a href="index/logout" class="logout">
+<ul class="horizontal">
+    <li class="page-title">
+        <a class="decoration-none text-white" href="/workflows">
+            Tablero Virtual
+        </a>
+    </li>
+
+    <li>
+        <a class="decoration-none text-white" href="/workflows">
+            <span class="material-icons">
+                home
+            </span>
+            Inicio
+        </a>
+    </li>
+
+    <li>
+        <a class="decoration-none text-white" href="/index/logout">
             <span class="material-icons">
                 logout
             </span>
+            Salir
         </a>
-        
-    </div>
-</nav>
+    </li>
+</ul>

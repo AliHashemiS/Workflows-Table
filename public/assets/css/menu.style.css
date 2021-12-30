@@ -1,20 +1,37 @@
-
-.menu{
-  display: flex;
-  padding: 10px;
+.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: var(--primary);
-  color: white;
-  height: 30px;
 }
 
-
-.logout{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  margin-left: 5px;
+.page-title:hover{
+  background-color: transparent !important;
 }
 
-.title{
+.horizontal li {
+  float: left;
   font-weight: 600;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.horizontal li:last-child{
+  float: right;
+  
+}
+
+.horizontal li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.horizontal a {
+  display: block;
+  padding: 8px;
+}
+
+.horizontal span{
+  vertical-align: middle;
+  font-size: 20px;
 }

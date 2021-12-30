@@ -30,6 +30,10 @@ body{
     color: var(--success) !important;
 }
 
+.text-white{
+    color: white !important;
+}
+
 .pointer{
     cursor: pointer;
 }
