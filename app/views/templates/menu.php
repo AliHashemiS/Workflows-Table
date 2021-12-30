@@ -2,7 +2,7 @@
 
 <nav class="menu">
     <div class="title">
-        Tablero Virtual
+        <a class="decoration-none" href="/workflows">Tablero Virtual</a>
     </div>
     <div>
         <a href="index/logout" class="logout">

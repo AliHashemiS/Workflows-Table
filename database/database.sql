@@ -17,7 +17,7 @@ CREATE TABLE public.workflow(
     updated_at  timestamp  DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT user_id FOREIGN KEY (id_user) REFERENCES public.user (id) MATCH SIMPLE
         ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON DELETE CASCADE
         NOT VALID
 );
 
@@ -32,7 +32,7 @@ CREATE TABLE public.column(
     updated_at  timestamp  DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT workflow_id FOREIGN KEY (id_workflow) REFERENCES public.workflow (id) MATCH SIMPLE
         ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON DELETE CASCADE
         NOT VALID
 );
 
@@ -48,6 +48,6 @@ CREATE TABLE public.stiky_note(
     updated_at  timestamp  DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT column_id FOREIGN KEY (id_column) REFERENCES public.column (id) MATCH SIMPLE
         ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON DELETE CASCADE
         NOT VALID
 );

@@ -47,4 +47,9 @@
             ];
             die($this->render('errors', $data));
         }
+
+		public function sendResponse($response,$StatusCode = 200){
+			http_response_code($StatusCode);
+			echo json_encode($response);
+		}
 	}
