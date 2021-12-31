@@ -20,11 +20,14 @@
                 </span>
             </a>
         <?php echo $data['name']; ?></h3>
-        <div class="columns">
+        <div id="columns-drop" class="columns">
             <?php foreach ($data['columns'] as &$column) { ?>
-                <div class="column box-shadow">
-                    <div class="column-title">
-                        <input type="text" disabled name="title" value="<?php echo $column->title; ?>">
+                <div id="column-<?php echo $column->id; ?>" data-priority="<?php echo $column->priority; ?>" data-id="<?php echo $column->id; ?>" draggable="true" ondragend="endDragColumn(event)" ondragstart="startDragColumn(event)" class="column box-shadow">
+
+                    <div id="column-title-<?php echo $column->id;?>">
+                        <label onclick="enableEdit(event)">
+                            <?php echo $column->title; ?>
+                        </label>
                     </div>
                     <ul class="column-stikynotes">
                         <?php foreach ($column->stikyNotes as &$stikyNote) { ?>
@@ -35,11 +38,11 @@
                     </ul>
                 </div>
             <?php } ?>
-            <div class="column box-shadow">
-                <div class="column-title">
-                    <input type="text" name="title" value="Añadir otra columna">
-                    <button>Agregar columna</button>
-                </div>
+            <div id="column-create" class="column box-shadow">
+                <form>
+                    <input type="text"  class="column-title" name="title" value="Añadir otra columna">
+                    <input type="submit" class="submit" name="save" value="Guardar">
+                </form>
             </div>
 
         </div>

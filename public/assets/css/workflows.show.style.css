@@ -29,17 +29,17 @@
   padding: 8px;
 }
 
-.column-title input{
-  background-color: transparent;
+.column-title{
+  background-color: bisque;
   border: none;
   color: black;
   font-weight: 600;
   font-size: 18px;
-  
 }
 
-.column-title input:disabled{
+.column-title:disabled{
   cursor: pointer;
+  background-color: transparent;
 }
 
 .column-stikynotes{
@@ -52,4 +52,30 @@
 .stikynote{
   border-radius: 5px;
   border: 1px grey;
+}
+
+
+.submit{
+  
+  background-color: var(--success);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit:hover{
+  opacity: 0.8;
+}
+
+.submit:disabled{
+  opacity: 0.5;
+}
+
+.submit:disabled:hover{
+  opacity: 0.6;
 }
