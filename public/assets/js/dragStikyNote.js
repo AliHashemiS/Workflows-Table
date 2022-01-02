@@ -122,7 +122,7 @@ function deleteStikyNote(event){
 function addStikyNote(event){
     const id_column = event.target.dataset.id;
     const content = 'Click para cambiar el contenido';
-    const priority = getMaxPriority(id_column) + 1;
+    const priority = getStikyNoteMaxPriority(id_column) + 1;
     
     var formData = new FormData();
     formData.append('content',content);
@@ -139,7 +139,7 @@ function addStikyNote(event){
     });
 }
 
-function getMaxPriority(id_column){
+function getStikyNoteMaxPriority(id_column){
     var stikyNotes = document.getElementById(`column-body-${id_column}`);
     var maxPriority = 0;
     for(let stikyNote of stikyNotes.children){  

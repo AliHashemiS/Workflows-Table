@@ -51,10 +51,13 @@
                         <button data-id="<?php echo $column->id; ?>" onclick="addStikyNote(event)" class="submit">
                             Agregar Stiky note
                         </button>
+                        <button data-id="<?php echo $column->id; ?>" onclick="deleteColumn(event)" class="delete">
+                            Eliminar
+                        </button>
                     </div>
                 </div>
             <?php } ?>
-            <button>Agregar Columna</button>
+            <button id="create-column" data-id_workflow="<?php echo $data['id']; ?>" onclick="addColumn(event)">Agregar Columna</button>
 
         </div>
     </div>

@@ -19,6 +19,7 @@
   overflow-x: scroll;
   height: calc(100% - 75px);
   padding: 8px;
+  grid-auto-rows: 100%;
 }
 
 .column{
@@ -40,7 +41,7 @@
 }
 
 .column-body{
-  height: calc(100% - 65px - 32px);
+  height: calc(100% - 65px - 70px);
   overflow-y: scroll;
   list-style: none;
   padding: 5px;
@@ -77,6 +78,19 @@
   color: white;
   cursor: pointer;
   width: 100%;
+}
+
+.delete{
+  
+  background-color: var(--danger);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 5px;
 }
 
 .submit:hover{

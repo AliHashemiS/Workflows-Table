@@ -98,6 +98,7 @@
 			$workflow = $this->workflowModel->find($id);
 
 			$data = [
+				'id' => $id,
 				'name' => $workflow->name,
 				'description' => $workflow->description,
 				'columns' => $workflow->columns

@@ -39,5 +39,25 @@ class Column {
         else false;
     }
 
+    public function delete($id){
+        $this->db->query('DELETE FROM public.column WHERE id = :id');
+        $this->db->bind(':id', $id);
+        if($this->db->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public function create($data){
+        $this->db->query('INSERT INTO public.column (id_workflow, title, priority) values (:id_workflow, :title, :priority) returning public.column.id;');
+        $this->db->bind(':id_workflow', $data['id_workflow']);
+        $this->db->bind(':title', $data['title']);
+        $this->db->bind(':priority', $data['priority']);
+        return $this->db->fetch();
+    }
+
+
     
 }
