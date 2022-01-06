@@ -64,6 +64,13 @@ function createWorkflow(event){
     });
 }
 
+function marcarWorkflow() {
+    let idWorkflow = window.localStorage.getItem("idWorkflow");
+    let tablaMarcada = document.getElementById("workflow-" + idWorkflow);
+    tablaMarcada.setAttribute("seleccionada",true);
+    console.log(idWorkflow);
+}
+
 function showAlert(css,message){
     const alert = document.getElementById('alert');
     alert.className = `alert ${css}`;
