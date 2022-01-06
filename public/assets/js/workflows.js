@@ -77,7 +77,7 @@ function createWorkflowElement(id,title,description){
     workflow.id = `workflow-${id}`;
 
     const form = document.createElement('form');
-    form.addEventListener('submit', (e) => createWorkflow(e,id));
+    form.addEventListener('submit', (e) => updateWorkflow(e,id));
     form.id = `workflow-form-${id}`;
 
     const nameInput = document.createElement('input');
