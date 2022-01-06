@@ -9,7 +9,7 @@
     <script src="/assets/js/workflows.js"></script>
     <title>Dashboard</title>
 </head>
-<body>
+<body onload="marcarWorkflow()">
     <?php require APP_ROOT . '/views/templates/menu.php'; ?>
 
     <div class="container">
