@@ -11,6 +11,7 @@ p {
 }
 
 .principalTable{
+  flex-flow: column;
   border-radius: 10px;
   transform: scale(1.5);
   min-height: 260px;
