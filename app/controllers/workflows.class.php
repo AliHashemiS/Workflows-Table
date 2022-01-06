@@ -9,7 +9,6 @@
 		}
 		
 		public function index() {
-			$_SESSION['id_user'] = 1;
 			if(isLoggedIn()){
 				$result = [
 					'workflows' => []
