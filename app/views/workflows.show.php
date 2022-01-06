@@ -11,10 +11,10 @@
     <script src="/assets/js/dragColumn.js"></script>
     <title>Dashboard</title>
 </head>
-<body>
+<body id="<?php echo $data['id'];?>" onload="presionar_targeta(event); automatic_read();">
     <?php require APP_ROOT . '/views/templates/menu.php'; ?>
 
-    <div class="container">
+    <div id="speackStatus" class="container">
         <h3>
             <a href="/workflows" class="decoration-none back-button pointer">
                 <span class="material-icons">
@@ -41,9 +41,9 @@
                                     </p>
                                     
                                 </div>
-                               
-                                <button data-id="<?php echo $stikyNote->id;?>" onclick="deleteStikyNote(event)">Borrar</button>
-                               
+                            
+                                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/trash-bin-3049206-2565648.png" data-id="<?php echo $stikyNote->id;?>" onclick="deleteStikyNote(event)" width="20" height="20" style= "right: 100mm;">
+                            
                             </li>
                         <?php } ?>
                     </ul>
