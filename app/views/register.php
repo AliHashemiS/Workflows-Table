@@ -7,27 +7,31 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="stylesheet" href="./assets/css/register.style.css">
+    <link rel="stylesheet" href="/assets/css/register.style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/request.js"></script>
+    <script src="/assets/js/user.js"></script>
     <title>SignUp</title>
 </head>
 <body>
-<div class="divPrincipal">
+    <div id="alert" class=""></div>
+    <div class="divPrincipal">
         <table class="principalTable" align="center" cellpadding="10" cellspacing="20">
-            <tr>  
-                <td>   
-                    <form>
+            <tr>
+                <td>
+                    <form id="register" onsubmit="createUser(event)">
                         <h1 style="margin-bottom: 10%;">Sign Up</h1>     
 
-                        <div class="divInputs"> 
-                            <input type="email" id="user-email" placeholder="Email address" required autofocus="">
+                        <div class="divInputs">
+                            <input type="email" name="userEmail" placeholder="Email address" required autofocus="">
                         </div>
 
                         <div class="divInputs">
-                            <input type="password" id="user-pass" placeholder="Password" required autofocus="">
+                            <input type="password" name="userPass" placeholder="Password" required autofocus="">
                         </div>
 
                         <div class="divInputs">
-                            <input type="password" id="user-repeatpass" placeholder="Repeat Password" required autofocus="">
+                            <input type="password" name="userRepeatpass" placeholder="Repeat Password" required autofocus="">
                         </div>
                         
                         <div class="divInputs">
