@@ -158,13 +158,13 @@ function createColumnElement(id,priority,title){
     button.dataset.id = id;
     button.addEventListener('click',addStikyNote);
     button.className = "submit";
-    button.innerText = "Agregar Stiky note";
+    button.innerText = "Aadd Sticky Note";
 
     const deleteButton = document.createElement('button');
     deleteButton.dataset.id = id;
     deleteButton.addEventListener('click',deleteColumn);
     deleteButton.className = "delete";
-    deleteButton.innerText = "Eliminar";
+    deleteButton.innerText = "Delete";
 
     div.appendChild(columnTitle);
     columnTitle.appendChild(label);

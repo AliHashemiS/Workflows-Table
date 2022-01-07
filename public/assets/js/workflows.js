@@ -89,7 +89,7 @@ function createWorkflowElement(id,title,description){
 
     const nameInput = document.createElement('input');
     nameInput.className = "workflow-title";
-    nameInput.placeholder = "Nombre de tablero";
+    nameInput.placeholder = "Workflow name";
     nameInput.name = "name";
     nameInput.min = 1;
     nameInput.max = 100;
@@ -99,7 +99,7 @@ function createWorkflowElement(id,title,description){
 
     const descriptionInput = document.createElement('textarea');
     descriptionInput.className = "workflow-description";
-    descriptionInput.placeholder = "Descripción de us nuevo tablero";
+    descriptionInput.placeholder = "Worflow description";
     descriptionInput.name = "description";
     descriptionInput.min = 1;
     descriptionInput.max = 1024;
@@ -109,13 +109,13 @@ function createWorkflowElement(id,title,description){
 
     const dateSpan = document.createElement('span');
     const currentDate = new Date();
-    dateSpan.innerText = `Creado: ${currentDate.toLocaleDateString()}`;
+    dateSpan.innerText = `Created at: ${currentDate.toLocaleDateString()}`;
 
     const submitInput = document.createElement('input');
     submitInput.className = "worflow-submit d-none";
     submitInput.type = "submit";
     submitInput.name = "submit";
-    submitInput.value = "Guardar";
+    submitInput.value = "save";
 
     const options = document.createElement('div');
     options.className = "workflow-options";

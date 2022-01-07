@@ -3,7 +3,7 @@
 <ul class="horizontal">
     <li class="page-title">
         <a class="decoration-none text-white" href="/workflows">
-            Tablero Virtual
+            Virtual Workflow
         </a>
     </li>
 
@@ -12,7 +12,7 @@
             <span class="material-icons">
                 home
             </span>
-            Inicio
+            Home
         </a>
     </li>
 
@@ -21,7 +21,7 @@
             <span class="material-icons">
                 logout
             </span>
-            Salir
+            Exit
         </a>
     </li>
 </ul>

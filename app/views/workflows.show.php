@@ -49,15 +49,15 @@
                     </ul>
                     <div class="column-footer">
                         <button data-id="<?php echo $column->id; ?>" onclick="addStikyNote(event)" class="submit">
-                            Agregar Stiky note
+                            Add Sticky Note
                         </button>
                         <button data-id="<?php echo $column->id; ?>" onclick="deleteColumn(event)" class="delete">
-                            Eliminar
+                            Delete
                         </button>
                     </div>
                 </div>
             <?php } ?>
-            <button id="create-column" data-id_workflow="<?php echo $data['id']; ?>" onclick="addColumn(event)">Agregar Columna</button>
+            <button id="create-column" data-id_workflow="<?php echo $data['id']; ?>" onclick="addColumn(event)">Add Column</button>
 
         </div>
     </div>

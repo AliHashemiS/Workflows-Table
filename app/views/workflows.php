@@ -14,7 +14,7 @@
 
     <div class="container">
         <h2>
-            Mis Tableros
+            Workflows
         </h2>  
 
         <div id="alert" class="">
@@ -24,24 +24,24 @@
         <div id="workflows" class="workflows">
             <div class="workflow box-shadow">
                 <form id="worflow-1" onsubmit="createWorkflow(event)">
-                    <input class="workflow-title" name="name" placeholder="Nombre Tablero" min="1" max="100" required value="">
+                    <input class="workflow-title" name="name" placeholder="Worflow name" min="1" max="100" required value="">
 
-                    <textarea class="workflow-description" name="description" required minlength="0" maxlength="1024" placeholder="Descripción de us nuevo tablero"></textarea>
-                    <input class="worflow-submit" type="submit" value="Guardar">
+                    <textarea class="workflow-description" name="description" required minlength="0" maxlength="1024" placeholder="Worflow description"></textarea>
+                    <input class="worflow-submit" type="submit" value="Save">
                 </form>
             </div>
 
             <?php foreach ($data['workflows'] as &$workflow) { ?>
                 <div id="workflow-<?php echo $workflow->id;?>" class="workflow box-shadow">
                     <form id="workflow-form-<?php echo $workflow->id;?>" onsubmit="updateWorkflow(event,<?php echo $workflow->id;?>)">
-                        <input class="workflow-title" name="name" placeholder="Nombre de tablero" min="1" max="100" required disabled value="<?php echo $workflow->name;?>">
+                        <input class="workflow-title" name="name" placeholder="Workflow name" min="1" max="100" required disabled value="<?php echo $workflow->name;?>">
 
                         <textarea class="workflow-description" disabled name="description" ><?php echo $workflow->description;?></textarea>
 
                         <span>
-                            Creado: <?php echo  date("d/m/Y", strtotime($workflow->created_at));?>
+                            Create at: <?php echo  date("d/m/Y", strtotime($workflow->created_at));?>
                         </span>
-                        <input class="worflow-submit d-none" name="submit" type="submit" value="Guardar">
+                        <input class="worflow-submit d-none" name="submit" type="submit" value="save">
                     </form>
                     <div class="workflow-options">
                         <a class="decoration-none  pointer text-success" href="workflows/show/<?php echo $workflow->id;?>">

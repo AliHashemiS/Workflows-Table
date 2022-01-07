@@ -178,15 +178,18 @@ function createStikyNoteElement(id,id_column,content,color,priority){
     p.addEventListener('click',enableEditStikyNote);
     p.innerText = content;
 
-    const button = document.createElement('button');
-    button.dataset.id=id;
-    button.addEventListener('click',deleteStikyNote);
-    button.innerText = "Borrar";
-
+	const deleteImg = document.createElement('img');
+	deleteImg.dataset.id=id;
+	deleteImg.width = 20;
+	deleteImg.height = 20;
+	deleteImg.style.right = "100mm";
+	deleteImg.addEventListener('click',deleteStikyNote);
+	deleteImg.src = "https://cdn.iconscout.com/icon/premium/png-256-thumb/trash-bin-3049206-2565648.png"
+    
     li.appendChild(input);
     div.appendChild(p);
     li.appendChild(div)
-    li.appendChild(button);
+    li.appendChild(deleteImg);
     return li;
 }
 
