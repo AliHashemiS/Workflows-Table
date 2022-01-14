@@ -26,8 +26,13 @@
                 <form id="worflow-1" onsubmit="createWorkflow(event)">
                     <input class="workflow-title" name="name" placeholder="Worflow name" min="1" max="100" required value="">
 
+<<<<<<< Updated upstream
                     <textarea class="workflow-description" name="description" required minlength="0" maxlength="1024" placeholder="Worflow description"></textarea>
                     <input class="worflow-submit" type="submit" value="Save">
+=======
+                    <textarea class="workflow-description" name="description" required minlength="0" maxlength="1024" placeholder="Descripción del nuevo tablero"></textarea>
+                    <input class="worflow-submit" type="submit" value="Guardar">
+>>>>>>> Stashed changes
                 </form>
             </div>
 
